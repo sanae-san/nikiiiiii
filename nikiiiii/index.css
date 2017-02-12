@@ -42,3 +42,6 @@
 .switch input:checked + label:hover:after {
     opacity: 0.5;
 }
+td{
+	white-space: nowrap;
+	}
