@@ -14,43 +14,102 @@
   </head>
   <body>
     <h1>ミラクル(たつ)ニキ</h1>
+    
+	<form name = "fm">
     <table>
     	<tr>
-        	<td><canvas id="canvas" width="800" height="1200"></canvas></td> 
+        	
             <td>
             ●設定<br />
             
        <div class="switch">
        <Table>
-    <TR><TD>	帽子	</TD><TD>	<input id="sw_1" checked type="checkbox"><label for= "sw_1"></label><br /><br /> </TD></TR>
-      <TR><TD>  髪  	</TD><TD>	<input id="sw_2" checked type="checkbox"><label for= "sw_2"></label><br /><br /> </TD></TR>
-      <TR><TD>  顔  	</TD><TD>	<input id="sw_3" checked type="checkbox"><label for= "sw_3"></label><br /><br /></TD></TR>
-    <TR><TD>    クマ     </TD><TD> 	<input id="sw_4" checked type="checkbox"><label for= "sw_4"></label><br /><br /></TD></TR>
-    <TR><TD>    ネックレス</TD><TD>	<input id="sw_5" checked type="checkbox"><label for= "sw_5"></label><br /><br /></TD></TR>
-    <TR> <TD>   前掛け	</TD><TD>	<input id="sw_6" checked type="checkbox"><label for= "sw_6"></label><br /><br /></TD></TR>
-    <TR> <TD>   服		</TD><TD>	<input id="sw_7" checked type="checkbox"><label for= "sw_7"></label><br /><br /></TD></TR>
-    <TR><TD>    腕輪	</TD><TD>	<input id="sw_8" checked type="checkbox"><label for= "sw_8"></label><br /><br /></TD></TR>
-    <TR> <TD>   ズボン	</TD><TD>	<input id="sw_9" checked type="checkbox"><label for= "sw_9"></label><br /><br /></TD></TR>
-    <TR> <TD>   スパッツ</TD><TD>	<input id="sw_10" checked type="checkbox"><label for= "sw_10"></label><br /><br /></TD></TR>
-    <TR> <TD>   靴		</TD><TD>	<input id="sw_11" checked type="checkbox"><label for= "sw_11"></label><br /><br /></TD></TR>
-    <TR> <TD>   靴下	</TD><TD>	<input id="sw_12" checked type="checkbox"><label for= "sw_12"></label><br /><br /></TD></TR>
-    <TR> <TD>   素体	</TD><TD>	<input id="sw_13" checked type="checkbox"><label for= "sw_13"></label><br /><br /></TD></TR>
-    <TR> <TD>   マント	</TD><TD>	<input id="sw_14" checked type="checkbox"><label for= "sw_14"></label><br /><br /></TD></TR>
-     <TR><TD>   背景	</TD><TD>	<input id="sw_15" checked type="checkbox"><label for= "sw_15"></label><br /><br /></TD></TR>
+    <TR><TD>	帽子	</TD><TD>	<input id="sw_1" checked type="checkbox"><label for= "sw_1"></label><br /><br /> </TD><TD>
+    		 <select name="fig_01" id="fig_01">
+             	<option value="./img/01_マーレイ帽子.png">マーレイ帽</option>
+                <option value="./img/01_ベレー.png">      ベレー帽  </option>
+             </select>	</TD></TR>
+           
+      <TR><TD>  髪  	</TD><TD>	<input id="sw_2" checked type="checkbox"><label for= "sw_2"></label><br /><br /> </TD><TD>	</TD></TR>
+      <TR><TD>  顔  	</TD><TD>	<input id="sw_3" checked type="checkbox"><label for= "sw_3"></label><br /><br /></TD><TD>  		
+             <select name="fig_03" id="fig_03">
+             	<option value="./img/03_顔1.png">通常</option>
+                <option value="./img/03_泣顔.png">泣顔</option>
+             </select>	</TD></TR>
+           
+    <TR><TD>    クマ     </TD><TD> 	<input id="sw_4" checked type="checkbox"><label for= "sw_4"></label><br /><br /></TD><TD>	</TD></TR>
+    <TR><TD>    装飾</TD><TD>	<input id="sw_5" checked type="checkbox"><label for= "sw_5"></label><br /><br /></TD><TD>
+    <select name="fig_05" id="fig_05">
+             	<option value="./img/05_ネックレス.png">ネックレス</option>
+                <option value="./img/05_リボン.png">リボン</option>
+             </select>
+    
+    	</TD></TR>
+        
+    <TR> <TD>   服前面	</TD><TD>	<input id="sw_6" checked type="checkbox"><label for= "sw_6"></label><br /><br /></TD><TD>
+     <select name="fig_06" id="fig_06">
+             	<option value="./img/06_前掛け.png">前掛け</option>
+                <option value="./img/06_ころスカート.png">ころスカート</option>
+             </select>
+
+    	</TD></TR>
+    <TR> <TD>   服		</TD><TD>	<input id="sw_7" checked type="checkbox"><label for= "sw_7"></label><br /><br /></TD><TD>	
+    
+         <select name="fig_07" id="fig_07">
+             	<option value="./img/07_服.png">マーレイ服</option>
+                <option value="./img/07_ころ服.png">ころ服</option>
+             </select>
+    
+    </TD></TR>
+    <TR><TD>    腕輪	</TD><TD>	<input id="sw_8" checked type="checkbox"><label for= "sw_8"></label><br /><br /></TD><TD>	</TD></TR>
+    <TR> <TD>   ズボン	</TD><TD>	<input id="sw_9" checked type="checkbox"><label for= "sw_9"></label><br /><br /></TD><TD>	</TD></TR>
+    <TR> <TD>インナー下</TD><TD>	<input id="sw_10" checked type="checkbox"><label for= "sw_10"></label><br /><br /></TD><TD>
+       <select name="fig_10" id="fig_10">
+             	<option value="./img/10_スパッツ.png">スパッツ</option>
+                <option value="./img/10_おぱんつ.png">ショーツ</option>
+             </select>
+    
+    	</TD></TR>
+    <TR> <TD>   靴		</TD><TD>	<input id="sw_11" checked type="checkbox"><label for= "sw_11"></label><br /><br /></TD><TD>
+           <select name="fig_11" id="fig_11">
+             	<option value="./img/11_靴.png">マーレイ靴</option>
+                <option value="./img/11_ローファ.png">ローファ</option>
+             </select>
+    
+    
+    
+    	</TD></TR>
+    <TR> <TD>   靴下	</TD><TD>	<input id="sw_12" checked type="checkbox"><label for= "sw_12"></label><br /><br /></TD><TD>
+           <select name="fig_12" id="fig_12">
+             	<option value="./img/12_靴下.png">マーレイ靴下</option>
+                <option value="./img/12_ニーソ.png">ニーソ</option>
+             </select>
+    
+    
+    
+    	</TD></TR>
+    <TR> <TD>   素体	</TD><TD>	<input id="sw_13" checked type="checkbox"><label for= "sw_13"></label><br /><br /></TD><TD>	</TD></TR>
+    <TR> <TD>   マント	</TD><TD>	<input id="sw_14" checked type="checkbox"><label for= "sw_14"></label><br /><br /></TD><TD>	</TD></TR>
+     <TR><TD>   背景	</TD><TD>	<input id="sw_15" checked type="checkbox"><label for= "sw_15"></label><br /><br /></TD><TD>	</TD></TR>
         </Table>
 	   </div>
           
        
             <br />
             ●Done<br />
-            <input type="button" value="決定" onclick="draw()"/><br />
+            <input type="button" class="btn" onclick="draw()" value="決定" style="WIDTH: 100px; HEIGHT: 60px"/><br />
+            ●保存する<br />
+            
+			<input type="button" class="btn" onclick="hoz()" value="保存"style="WIDTH: 100px; HEIGHT: 60px"/><br />
+
             
             </td>
+            <td><canvas id="canvas" width="800" height="1200"></canvas></td> 
         </tr>
     
     </table>
-    
-    
+   
+    </form>
      
    
   </body>
