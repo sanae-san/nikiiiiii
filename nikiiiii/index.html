@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
@@ -7,6 +7,8 @@
     <meta http-equiv="Content-Language" content="ja" />
     <meta http-equiv="Content-Style-Type" content="text/css" />
     <meta http-equiv="Content-Script-Type" content="text/javascript" />
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <title>ミラクル(たつ)ニキ</title>
     <!--[if IE]><script type="text/javascript" src="excanvas.js"></script><![endif]-->
     <script type="text/javascript" src="index.js"></script>
@@ -66,7 +68,7 @@
     <TR> <TD>インナー下</TD><TD>	<input id="sw_10" checked type="checkbox"><label for= "sw_10"></label><br /><br /></TD><TD>
        <select name="fig_10" id="fig_10">
              	<option value="./img/10_スパッツ.png">スパッツ</option>
-                <option value="./img/10_おぱんつ_.png">ショーツ</option>
+                <option value="./img/10_おぱんつ.png">ショーツ</option>
              </select>
     
     	</TD></TR>
@@ -96,13 +98,12 @@
           
        
             <br />
-            ●Done<br />
-            <input type="button" value="決定" onclick="draw()"/><br />
-            ●保存する
-            
-			<input type="button" value="保存" onclick="hoz()"/><br />
-
-            
+            ●設定を反映する<br />
+            <input type="button" class="btn" onclick="draw()" value="実行" style="WIDTH: 100px; HEIGHT: 60px"/><br />
+            ●つぶやく<br />
+            ※少し待ってね<br />
+              
+              <input type="button" class="btn" onclick="hoz()" value="ついーと"style="WIDTH: 100px; HEIGHT: 60px"/><br /><br />
             </td>
             <td><canvas id="canvas" width="800" height="1200"></canvas></td> 
         </tr>
