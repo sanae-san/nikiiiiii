@@ -12,6 +12,7 @@ window.onload = function()
 };
 
 function draw() {
+
   /* canvas要素のノードオブジェクト */
   var canvas = document.getElementById("canvas");
   /* canvas要素の存在チェックとCanvas未対応ブラウザの対処 */
@@ -68,30 +69,19 @@ var element = document.getElementById("sw_1"); var isChecked = element.checked;i
             loadedCount++;
         }, false);
     }
-  
-}
-
-
-function twitText() {
-	var s, url;
-	s = "投稿するテキスト";
-	url = document.location.href;
 	
-	if (s != "") {
-		if (s.length > 140) {
-			//文字数制限
-			alert("テキストが140字を超えています");
-		} else {
-			//投稿画面を開く
-			url = "http://twitter.com/share?url=" + escape(url) + "&text=" + s;
-			window.open(url,"_blank","width=600,height=300");
-		}
-	}
+
 }
 
 
+
+
+
+
+//保存
 function hoz(){
 	
+
 var canvas = document.getElementById("canvas");  //canvas要素を取得
   var data = canvas.toDataURL('image/png');
 
@@ -133,10 +123,9 @@ var uploadImageToImgur = function (blob) {
 
         //return id;
         var file = 'http://i.imgur.com/' + id + '.png';
-
+		$.unblockUI();
 		twi(file)
-     
-       
+
     }
   });
 };
@@ -148,7 +137,37 @@ function twi(file) {
     //window.open('http://twitter.com/home?status=' + encodeURI('')  + '%0A%23' + encodeURI('ミラクル_タツ_ニキ') + '%0A%20' + encodeURI(file), '_blank');
 	window.location.href = 'https://twitter.com/intent/tweet?original_referer=' + encodeURI(window.location.href ) +'&ref_src=twsrc%5Etfw&text=' + encodeURI('')  + '%0A%23' + encodeURI('ミラクル_タツ_ニキ') + '%0A%20' + encodeURI(file);
 
-	
-	
 };
+
+
+
+
+
+
+$(function(){
+
+
+
+	$('#btn_ent').click(function(){
+        $.blockUI();
+		 draw();
+		setTimeout(function(){
+	        $.unblockUI();
+		},1000);     
+     
+    });
+	
+	
+    $('#btn_twi').click(function() {
+
+         $.blockUI();
+		  
+		  hoz();
+		  
+		setTimeout(function(){
+	        $.unblockUI();
+		},2000);     
+
+    }); 
+}); 
 
