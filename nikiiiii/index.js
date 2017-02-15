@@ -146,7 +146,7 @@ var uploadImageToImgur = function (blob) {
 function twi(file) {
 	//document.title
     //window.open('http://twitter.com/home?status=' + encodeURI('')  + '%0A%23' + encodeURI('ミラクル_タツ_ニキ') + '%0A%20' + encodeURI(file), '_blank');
-	window.location.href = 'https://twitter.com/intent/tweet?original_referer=http%3A%2F%2Fqiita.com%2Fkatsunory%2Fitems%2F4d90e24e389a587d3690&ref_src=twsrc%5Etfw&text=' + encodeURI('')  + '%0A%23' + encodeURI('ミラクル_タツ_ニキ') + '%0A%20' + encodeURI(file);
+	window.location.href = 'https://twitter.com/intent/tweet?original_referer=' + encodeURI(window.location.href ) +'&ref_src=twsrc%5Etfw&text=' + encodeURI('')  + '%0A%23' + encodeURI('ミラクル_タツ_ニキ') + '%0A%20' + encodeURI(file);
 
 	
 	
