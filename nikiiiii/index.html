@@ -9,6 +9,7 @@
     <meta http-equiv="Content-Script-Type" content="text/javascript" />
 
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+      <script type="text/javascript" src="jquery.blockUI.js"></script>
     <title>ミラクル(たつ)ニキ</title>
     <!--[if IE]><script type="text/javascript" src="excanvas.js"></script><![endif]-->
     <script type="text/javascript" src="index.js"></script>
@@ -99,11 +100,13 @@
        
             <br />
             ●設定を反映する<br />
-            <input type="button" class="btn" onclick="draw()" value="実行" style="WIDTH: 100px; HEIGHT: 60px"/><br />
+            <input id = "btn_ent" type="button" class="btn" value="実行" style="WIDTH: 100px; HEIGHT: 60px"/><br />
             ●つぶやく<br />
-            ※少し待ってね<br />
+            ※押したあと少し待ってね<br />
               
-              <input type="button" class="btn" onclick="hoz()" value="ついーと"style="WIDTH: 100px; HEIGHT: 60px"/><br /><br />
+              <input id = "btn_twi" type="button" class="btn" value="ついーと"style="WIDTH: 100px; HEIGHT: 60px"/><br /><br />
+                <input id="code" type="text" />
+                <input id="massage" type="text" />
             </td>
             <td><canvas id="canvas" width="800" height="1200"></canvas></td> 
         </tr>
